@@ -1,0 +1,19 @@
+{
+  "repos": ["./apps/user", "./apps/order", "../shared-lib"],
+  "defaultRemote": "origin",
+  "defaultBranch": "main",
+  "parallel": true,
+
+  "macros": {
+    "syncAll": ["pull origin main", "checkout dev", "status"],
+    "pushAll": ["add .", "commit \"chore: auto commit\"", "push origin dev"]
+  },
+
+  "theme": {
+    "success": "greenBright",
+    "fail": "red",
+    "info": "cyan",
+    "repo": "blue",
+    "cmd": "magenta"
+  }
+}
